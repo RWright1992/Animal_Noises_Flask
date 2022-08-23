@@ -14,8 +14,14 @@ services:
   animal:
     build: ./animal
     image: rwright1992/animal-jenkins-swarm:latest
+    ports:
+    - target: 5001
+      published: 5001
   noise:
     build: ./noise
     image: rwright1992/noise-jenkins-swarm:latest
+    ports:
+    - target: 5000
+      published: 5001
     depends_on:
     - "animal"
