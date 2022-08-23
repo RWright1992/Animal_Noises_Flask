@@ -5,7 +5,7 @@ import requests
 @app.route('/', methods=['GET'])
 @app.route('/animal/noise', methods=['GET'])
 def get_noise():
-    animal = requests.get('http://jenkins-stack_animal:5001/get/animal')
+    animal = requests.get('http://animal/get/animal:5001')
     animal_text = animal.text
     if animal_text == 'Dog':
         noise = 'Woof'
