@@ -6,5 +6,5 @@ import random
 @app.route('/get/animal', methods=['GET'])
 def get_animal():
     animal = ['Dog', 'Cow', 'Cat',  'Not a cow']
-    randomnum = random.randint(0,2)
+    randomnum = random.randint(0,3)
     return Response(animal[randomnum], mimetype='text/plain')
